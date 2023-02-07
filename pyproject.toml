@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "interactive-sumo-exporter"
+version = "0.1.0"
+description = ""
+authors = ["CR1337 <captain_2@gmx.de>"]
+readme = "README.md"
+packages = [{include = "interactive_sumo_exporter"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+orm-importer = {git = "https://github.com/simulate-digital-rail/orm-importer"}
+planpro-importer = {git = "https://github.com/simulate-digital-rail/planpro-importer"}
+cli-importer = {git = "https://github.com/simulate-digital-rail/cli-importer"}
+sumoexporter = {git = "https://github.com/simulate-digital-rail/sumo-exporter"}
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
